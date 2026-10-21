@@ -6,22 +6,18 @@
     <title>Mí Pueblito Mexican Food | Authentic Mexican Cuisine in Glendale</title>
     <meta name="description" content="Experience authentic, home-style Mexican cuisine at Mí Pueblito Mexican Food in Glendale, AZ. Sizzling carne asada, famous weekend menudo, and more. Order online!">
     
-    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Mí Pueblito Mexican Food | Authentic Mexican Cuisine">
     <meta property="og:description" content="Authentic, home-style Mexican cuisine made with love. Order online for pickup or delivery!">
     <meta property="og:image" content="https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602330/475683737_1083026386957287_15158598332303763_n_ft9mg7.jpg">
     <meta property="og:type" content="restaurant">
     <meta property="og:url" content="https://menutech.xyz">
     
-    <!-- Favicon -->
     <link rel="icon" id="favicon" type="image/png" href="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- SEO Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,7 +40,6 @@
 
     <style>
         :root {
-            /* Palette: Pueblo, Mexican, Hogareña */
             --clr-red: #D32F2F;
             --clr-red-hover: #b71c1c;
             --clr-yellow: #F2A900;
@@ -71,6 +66,11 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -80,11 +80,9 @@
             color: var(--clr-text);
             background-color: var(--clr-bg);
             line-height: 1.8;
-            overflow-x: hidden;
             position: relative;
         }
 
-        /* Animated Background Pattern */
         .bg-pattern {
             position: fixed;
             top: 0;
@@ -120,7 +118,6 @@
             color: inherit;
         }
 
-        /* Reusable Components */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -205,13 +202,12 @@
         .title {
             font-family: var(--font-heading);
             color: var(--clr-brown);
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -1px;
         }
 
-        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -331,10 +327,10 @@
             transition: all 0.3s ease;
         }
 
-        /* Hero */
         .hero {
             position: relative;
             min-height: 100vh;
+            min-height: 100svh;
             display: flex;
             align-items: center;
             padding-top: 100px;
@@ -390,7 +386,7 @@
 
         .hero-tagline {
             font-family: var(--font-heading);
-            font-size: clamp(3rem, 7vw, 6rem);
+            font-size: clamp(2.5rem, 7vw, 6rem);
             font-weight: 800;
             line-height: 1.05;
             margin-bottom: 25px;
@@ -413,28 +409,29 @@
             flex-wrap: wrap;
         }
 
-        /* Decorative SVG Waves */
         .wave-bottom {
             position: absolute;
-            bottom: -2px;
+            bottom: -1px;
             left: 0;
             width: 100%;
             overflow: hidden;
             line-height: 0;
+            z-index: 5;
         }
 
         .wave-bottom svg {
             position: relative;
             display: block;
-            width: calc(100% + 1.3px);
-            height: 80px;
+            width: 100%;
+            height: 120px;
+            transform: scale(1.02);
+            transform-origin: bottom center;
         }
 
         .wave-bottom .shape-fill {
             fill: var(--clr-bg);
         }
 
-        /* About Section */
         .about-section {
             padding: 120px 0;
             position: relative;
@@ -504,7 +501,6 @@
             color: var(--clr-brown-light);
         }
 
-        /* Gallery */
         .gallery-section {
             padding: 120px 0;
             background-color: var(--clr-white);
@@ -559,7 +555,6 @@
             opacity: 1;
         }
 
-        /* Location / Info Section */
         .info-section {
             padding: 120px 0;
             background-color: var(--clr-brown);
@@ -649,7 +644,6 @@
             top: 0; left: 0;
         }
 
-        /* Footer */
         .footer {
             background-color: #2D1B16;
             color: #d7ccc8;
@@ -658,7 +652,6 @@
             position: relative;
         }
 
-        /* Removed invert filter per user request */
         .footer-logo {
             max-width: 160px;
             margin: 0 auto 40px;
@@ -708,7 +701,6 @@
             color: var(--clr-white);
         }
 
-        /* Scroll Animations */
         .reveal {
             opacity: 0;
             transform: translateY(50px);
@@ -724,7 +716,11 @@
         .delay-2 { transition-delay: 0.2s; }
         .delay-3 { transition-delay: 0.3s; }
 
-        /* Responsive */
+        /* Responsive Fixes */
+        @media (max-width: 1200px) {
+            .wave-bottom svg { height: 80px; }
+        }
+
         @media (max-width: 992px) {
             .about-grid, .info-grid {
                 grid-template-columns: 1fr;
@@ -739,9 +735,51 @@
                 grid-row: auto;
                 grid-column: auto;
             }
+            .wave-bottom svg { height: 60px; }
         }
 
         @media (max-width: 768px) {
+            .hero {
+                padding-top: 120px;
+                padding-bottom: 80px;
+                min-height: auto;
+            }
+            .hero-tagline {
+                font-size: 2.5rem;
+                letter-spacing: -1px;
+            }
+            .hero-desc {
+                font-size: 1.1rem;
+            }
+            .wave-bottom svg {
+                height: 40px;
+            }
+            .about-section, .gallery-section, .info-section {
+                padding: 80px 0;
+            }
+            .about-image-wrapper {
+                margin-right: 20px;
+                margin-bottom: 40px;
+            }
+            .about-img-accent {
+                width: 60%;
+                right: -15px;
+                bottom: -20px;
+                border-width: 6px;
+            }
+            .about-img-main {
+                border-width: 6px;
+            }
+            .info-card {
+                padding: 30px 20px;
+            }
+            .map-wrapper {
+                min-height: 350px;
+                height: 350px;
+            }
+            .footer {
+                padding: 60px 0 20px;
+            }
             .nav-menu {
                 position: absolute;
                 top: 100%;
@@ -776,7 +814,6 @@
 
     <div class="bg-pattern"></div>
 
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="nav-brand">
@@ -802,7 +839,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero" id="hero">
         <img id="hero-bg-img" src="https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602330/475683737_1083026386957287_15158598332303763_n_ft9mg7.jpg" alt="Mexican Food" class="hero-bg">
         <div class="hero-overlay"></div>
@@ -816,7 +852,6 @@
                     <a href="https://mipueblitomexicanfood.onlineordering.io/en/menu" class="btn btn-primary" data-es="Pedir en Línea" data-en="Order Online">Order Online</a>
                     <a href="#about" class="btn btn-secondary" data-es="Nuestra Historia" data-en="Our Story">Our Story</a>
                 </div>
-                <!-- Menutech Orders System -->
                 <div style="display: none;">
                     <menutech-orders id="hero-orders" cuid="#" ruid="#" background="#D32F2F" color="#ffffff" data-glf-cuid="#" data-glf-ruid="#"></menutech-orders>
                     <menutech-reservations id="hero-reservations" cuid="#" ruid="#" background="#F2A900" color="#ffffff" data-glf-cuid="#" data-glf-ruid="#" data-glf-reservation="true"></menutech-reservations>
@@ -831,7 +866,6 @@
         </div>
     </header>
 
-    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="about-grid">
@@ -855,7 +889,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
     <section class="gallery-section" id="gallery">
         <div class="container">
             <div class="section-header reveal">
@@ -863,12 +896,10 @@
                 <h2 class="title" data-es="Deliciosa Comida Mexicana" data-en="Delicious Mexican Food">Delicious Mexican Food</h2>
             </div>
             <div class="gallery-grid" id="gallery-container">
-                <!-- Dynamically populated by JS to include all 15 images -->
             </div>
         </div>
     </section>
 
-    <!-- Info Section -->
     <section class="info-section" id="info">
         <div class="container">
             <div class="section-header reveal">
@@ -902,13 +933,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <img src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png" alt="Mí Pueblito Logo" class="footer-logo reveal">
+            <img src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png" alt="Mí Pueblito Logo" class="footer-logo">
             
             <div class="social-links reveal delay-1" id="social-icons">
-                <!-- Dynamically populated -->
                 <a href="https://www.instagram.com/mipueblitomexicanfood/" target="_blank" class="social-link" aria-label="Instagram">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
                 </a>
@@ -923,15 +952,12 @@
         </div>
     </footer>
 
-    <!-- Core Scripts -->
     <script src="https://www.fbgcdn.com/embedder/js/ewm2.js"></script>
     <script src="https://menutech.xyz/menutechUI.min.js"></script>
     
     <script>
-        // Set dynamic copyright year instantly
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-        // Cloudinary Image Optimizer
         const optimizeCloudinaryUrl = (url, options = {}) => {
             if (!url || typeof url !== 'string' || !url.includes('res.cloudinary.com')) return url;
             const [baseUrl, hash] = url.split('#');
@@ -955,7 +981,6 @@
             return `${parts[0]}/upload/${transformations.join(',')}/${cleanPath}${hash ? '#'+hash : ''}`;
         };
 
-        // UI Interactions
         const navbar = document.getElementById('navbar');
         const mobileToggle = document.getElementById('mobile-toggle');
         const navMenu = document.getElementById('nav-menu');
@@ -987,7 +1012,6 @@
             });
         });
 
-        // Scroll animations
         const revealElements = document.querySelectorAll('.reveal');
         
         const revealCallback = (entries, observer) => {
@@ -1004,22 +1028,18 @@
         });
 
         revealElements.forEach(el => {
-            // Hero is active by default
             if(!el.classList.contains('active')) {
                 revealObserver.observe(el);
             }
         });
 
-        // Translation System
         let currentLang = 'en';
         function setLanguage(lang) {
             currentLang = lang;
             
-            // Toggle active state on buttons
             document.getElementById('lang-en').classList.toggle('active', lang === 'en');
             document.getElementById('lang-es').classList.toggle('active', lang === 'es');
 
-            // Update all translatable elements
             document.querySelectorAll('[data-es][data-en]').forEach(el => {
                 if(el.placeholder !== undefined && el.tagName === 'INPUT') {
                     el.placeholder = el.getAttribute(`data-${lang}`);
@@ -1031,7 +1051,6 @@
             document.documentElement.lang = lang;
         }
 
-        // Complete Gallery from Data
         const completeGallery = [
             "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602472/687287613_1444215077505081_1502647049237761399_n_q8ygwv.jpg",
             "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602473/676349300_1434108815182374_8888927283771508129_n_tolwhe.jpg",
@@ -1066,20 +1085,17 @@
                     </div>
                 `).join('');
                 
-                // Re-observe dynamically added gallery items
                 document.querySelectorAll('.gallery-item').forEach(el => {
                     revealObserver.observe(el);
                 });
             }
         }
 
-        // Render initial gallery with all 15 images
         renderGallery(completeGallery);
 
         function updateUI(data) {
             if (!data) return;
 
-            // Logos & Images
             if (data.logoImg) {
                 const navLogo = document.getElementById('nav-logo');
                 const favicon = document.getElementById('favicon');
@@ -1107,7 +1123,6 @@
                 if (img2) img2.src = optimizeCloudinaryUrl(data.aboutImg2, { width: 600 });
             }
 
-            // Info Data
             if (data.info) {
                 const addressEls = [document.getElementById('info-address'), document.getElementById('hero-address')];
                 const phoneEl = document.getElementById('info-phone');
@@ -1127,7 +1142,6 @@
                 if (data.info.hours && hoursEl) hoursEl.textContent = data.info.hours;
             }
 
-            // Socials & Tiktok Replacement
             if (data.socials) {
                 const container = document.getElementById('social-icons');
                 if (container) {
@@ -1145,7 +1159,6 @@
                 }
             }
 
-            // Update Gallery if new data provided
             if (data.gallery && data.gallery.length > 0) {
                 renderGallery(data.gallery);
             }
@@ -1170,3 +1183,4 @@
     </script>
 </body>
 </html>
+```<FollowUp label="¿Deseas agregar alguna otra sección?" query="Me gustaría agregar una sección de testimonios a la página."/>
