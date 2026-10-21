@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mí Pueblito Mexican Food | Authentic Mexican Cuisine in Glendale</title>
+    <meta name="description" content="Experience authentic, home-style Mexican cuisine at Mí Pueblito Mexican Food in Glendale, AZ. Sizzling carne asada, famous weekend menudo, and more. Order online!">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Mí Pueblito Mexican Food | Authentic Mexican Cuisine">
+    <meta property="og:description" content="Authentic, home-style Mexican cuisine made with love. Order online for pickup or delivery!">
+    <meta property="og:image" content="https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602330/475683737_1083026386957287_15158598332303763_n_ft9mg7.jpg">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://menutech.xyz">
+    
+    <!-- Favicon -->
+    <link rel="icon" id="favicon" type="image/png" href="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Mí Pueblito Mexican Food",
+      "image": "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png",
+      "telephone": "623-842-4811",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6704 W Bethany Home Rd #3",
+        "addressLocality": "Glendale",
+        "addressRegion": "AZ",
+        "postalCode": "85303"
+      },
+      "menu": "https://mipueblitomexicanfood.onlineordering.io/en/menu",
+      "servesCuisine": "Mexican",
+      "openingHours": "Mo-Su 08:00-23:00"
+    }
+    </script>
+
+    <style>
+        :root {
+            /* Palette: Pueblo, Mexican, Hogareña */
+            --clr-red: #D32F2F;
+            --clr-red-hover: #b71c1c;
+            --clr-yellow: #F2A900;
+            --clr-yellow-hover: #E65100;
+            --clr-brown: #3E2723;
+            --clr-brown-light: #5D4037;
+            --clr-blue: #0288D1;
+            --clr-bg: #FCF9F2;
+            --clr-white: #ffffff;
+            --clr-text: #4E342E;
+            
+            --font-heading: 'Sora', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+            
+            --shadow-soft: 0 15px 35px rgba(62, 39, 35, 0.1);
+            --shadow-hover: 0 20px 45px rgba(62, 39, 35, 0.2);
+            --radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--clr-text);
+            background-color: var(--clr-bg);
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Pattern */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d32f2f' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: -1;
+            animation: movePattern 60s linear infinite;
+        }
+
+        @keyframes movePattern {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50%, -50%); }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Reusable Components */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.1);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .btn-primary {
+            background-color: var(--clr-red);
+            color: var(--clr-white);
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(211, 47, 47, 0.6);
+        }
+
+        .btn-secondary {
+            background-color: var(--clr-yellow);
+            color: var(--clr-brown);
+            box-shadow: 0 8px 25px rgba(242, 169, 0, 0.4);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(242, 169, 0, 0.6);
+            color: var(--clr-brown);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .subtitle {
+            font-family: var(--font-heading);
+            color: var(--clr-red);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(211, 47, 47, 0.1);
+            padding: 8px 20px;
+            border-radius: 30px;
+        }
+
+        .title {
+            font-family: var(--font-heading);
+            color: var(--clr-brown);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(252, 249, 242, 0.98);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            transition: all 0.4s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 10px 30px rgba(62, 39, 35, 0.08);
+            border-bottom-color: var(--clr-yellow);
+            padding: 5px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled .nav-container {
+            height: 75px;
+        }
+
+        .nav-brand img {
+            height: 65px;
+            width: auto;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .navbar.scrolled .nav-brand img {
+            height: 55px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--clr-brown);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            position: relative;
+            padding: 5px 0;
+            overflow: hidden;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--clr-red);
+            transform: translateX(-101%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: translateX(0);
+        }
+
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            background: var(--clr-white);
+            border: 2px solid var(--clr-yellow);
+            border-radius: 30px;
+            padding: 4px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 10px rgba(242, 169, 0, 0.2);
+        }
+
+        .lang-btn {
+            cursor: pointer;
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: var(--clr-brown-light);
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--clr-yellow);
+            color: var(--clr-brown);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            width: 32px;
+            height: 3px;
+            background-color: var(--clr-brown);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            z-index: -2;
+            animation: subtleZoom 20s infinite alternate linear;
+        }
+
+        @keyframes subtleZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(62, 39, 35, 0.9) 0%, rgba(211, 47, 47, 0.4) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--clr-white);
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-logo-anim {
+            max-width: 200px;
+            margin: 0 auto 30px;
+            filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.4));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero-tagline {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 7vw, 6rem);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 25px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            letter-spacing: -2px;
+        }
+
+        .hero-desc {
+            font-size: 1.3rem;
+            margin-bottom: 45px;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Decorative SVG Waves */
+        .wave-bottom {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-bottom svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        .wave-bottom .shape-fill {
+            fill: var(--clr-bg);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .about-img-main {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            z-index: 2;
+            border: 10px solid var(--clr-white);
+            transform: rotateY(-5deg) rotateX(5deg);
+            transition: var(--transition);
+        }
+
+        .about-image-wrapper:hover .about-img-main {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .about-img-accent {
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+            width: 55%;
+            border-radius: var(--radius);
+            border: 10px solid var(--clr-white);
+            box-shadow: var(--shadow-hover);
+            z-index: 3;
+            transform: translateY(0);
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .about-shape {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            background-color: var(--clr-yellow);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            z-index: 1;
+            animation: morph 8s ease-in-out infinite alternate;
+            opacity: 0.8;
+        }
+
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            100% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+            color: var(--clr-brown-light);
+        }
+
+        /* Gallery */
+        .gallery-section {
+            padding: 120px 0;
+            background-color: var(--clr-white);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            cursor: crosshair;
+        }
+
+        .gallery-item:nth-child(3n+1) {
+            grid-row: span 2;
+        }
+        
+        .gallery-item:nth-child(4n+2) {
+            grid-column: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(211,47,47,0.8) 0%, transparent 60%);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Location / Info Section */
+        .info-section {
+            padding: 120px 0;
+            background-color: var(--clr-brown);
+            color: var(--clr-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2.5L22.5 16 25 13.5V0h2v13.5L29.5 16 32 13.5V0h2v13.5L36.5 16 39 13.5V0h-2v11.5L34.5 14 32 11.5V0h-2v11.5L27.5 14 25 11.5V0h-2v12.5L20.5 15 18 17.5H0v2h18v2.5L15.5 24 13 26.5V40h2V26.5L17.5 24 20 21.5V40h2V21.5L24.5 24 27 26.5V40h2V26.5L31.5 24 34 26.5V40h2V26.5L38.5 24 41 26.5V40h-2V28.5L36.5 26 34 28.5V40h-2V28.5L29.5 26 27 28.5V40h-2V27.5L22.5 25 20 22.5z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+            align-items: stretch;
+        }
+
+        .info-card {
+            background-color: var(--clr-white);
+            color: var(--clr-text);
+            padding: 50px 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border-top: 8px solid var(--clr-red);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(0);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .info-block {
+            margin-bottom: 35px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid var(--clr-yellow);
+        }
+        
+        .info-block:last-child {
+            margin-bottom: 0;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .info-block h4 {
+            font-family: var(--font-heading);
+            color: var(--clr-brown);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .info-block p {
+            color: var(--clr-brown-light);
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .map-wrapper {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            height: 100%;
+            min-height: 450px;
+            border: 5px solid var(--clr-yellow);
+            position: relative;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0; left: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2D1B16;
+            color: #d7ccc8;
+            padding: 80px 0 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Removed invert filter per user request */
+        .footer-logo {
+            max-width: 160px;
+            margin: 0 auto 40px;
+            display: block;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            color: var(--clr-white);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--clr-yellow);
+            color: var(--clr-brown);
+            transform: translateY(-8px) rotate(8deg);
+            box-shadow: 0 10px 20px rgba(242, 169, 0, 0.4);
+        }
+
+        .footer-bottom {
+            padding-top: 35px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom a {
+            color: var(--clr-yellow);
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-bottom a:hover {
+            color: var(--clr-white);
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid, .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .map-wrapper {
+                height: 450px;
+            }
+            .gallery-grid {
+                grid-auto-rows: 200px;
+            }
+            .gallery-item:nth-child(3n+1), .gallery-item:nth-child(4n+2) {
+                grid-row: auto;
+                grid-column: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(252, 249, 242, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                padding: 30px 20px;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                clip-path: circle(0% at 100% 0);
+                transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            .nav-menu.active {
+                clip-path: circle(150% at 100% 0);
+            }
+            .mobile-toggle {
+                display: flex;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-brand">
+                <img id="nav-logo" src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png" alt="Mí Pueblito Logo">
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link" data-es="Inicio" data-en="Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-es="Nosotros" data-en="About Us">About Us</a></li>
+                <li><a href="#gallery" class="nav-link" data-es="Galería" data-en="Gallery">Gallery</a></li>
+                <li><a href="#info" class="nav-link" data-es="Contacto" data-en="Contact">Contact</a></li>
+                <li>
+                    <div class="lang-switch">
+                        <span class="lang-btn active" id="lang-en" onclick="setLanguage('en')">EN</span>
+                        <span class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <img id="hero-bg-img" src="https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602330/475683737_1083026386957287_15158598332303763_n_ft9mg7.jpg" alt="Mexican Food" class="hero-bg">
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content reveal active">
+                <img src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png" alt="Logo" class="hero-logo-anim">
+                <h1 class="hero-tagline reveal delay-1 active" data-es="El Auténtico Sabor a Casa" data-en="Authentic Taste of Home">Authentic Taste of Home</h1>
+                <p class="hero-desc reveal delay-2 active" id="hero-address" data-es="6704 W Bethany Home Rd #3, Glendale, AZ 85303" data-en="6704 W Bethany Home Rd #3, Glendale, AZ 85303">6704 W Bethany Home Rd #3, Glendale, AZ 85303</p>
+                <div class="hero-actions reveal delay-3 active">
+                    <a href="https://mipueblitomexicanfood.onlineordering.io/en/menu" class="btn btn-primary" data-es="Pedir en Línea" data-en="Order Online">Order Online</a>
+                    <a href="#about" class="btn btn-secondary" data-es="Nuestra Historia" data-en="Our Story">Our Story</a>
+                </div>
+                <!-- Menutech Orders System -->
+                <div style="display: none;">
+                    <menutech-orders id="hero-orders" cuid="#" ruid="#" background="#D32F2F" color="#ffffff" data-glf-cuid="#" data-glf-ruid="#"></menutech-orders>
+                    <menutech-reservations id="hero-reservations" cuid="#" ruid="#" background="#F2A900" color="#ffffff" data-glf-cuid="#" data-glf-ruid="#" data-glf-reservation="true"></menutech-reservations>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <span class="subtitle" data-es="Nuestra Historia" data-en="Our Story">Our Story</span>
+                    <h2 class="title" id="about-title" data-es="Somos Mí Pueblito Mexican Food" data-en="We are Mí Pueblito Mexican Food">We are Mí Pueblito Mexican Food</h2>
+                    <br>
+                    <p id="about-p1" data-es="Mí Pueblito Mexican Food en Glendale, Arizona sirve auténtica cocina mexicana estilo casero, hecha con amor y sabor que puedes probar en cada bocado. Desde carne asada crujiente y tacos dorados hasta abundantes burritos, enchiladas y nuestro famoso menudo de fin de semana, cada platillo se prepara fresco con ingredientes de calidad y recetas tradicionales." data-en="Mi Pueblito Mexican Food in Glendale, Arizona serves up authentic, home-style Mexican cuisine made with love and flavor you can taste in every bite. From sizzling carne asada and crispy rolled tacos to hearty burritos, enchiladas, and our famous weekend menudo, every dish is freshly prepared with quality ingredients and traditional recipes.">
+                        Mi Pueblito Mexican Food in Glendale, Arizona serves up authentic, home-style Mexican cuisine made with love and flavor you can taste in every bite. From sizzling carne asada and crispy rolled tacos to hearty burritos, enchiladas, and our famous weekend menudo, every dish is freshly prepared with quality ingredients and traditional recipes.
+                    </p>
+                    <p id="about-p2" data-es="Ya sea que vengas por un bocado rápido, cenes con la familia o pidas en línea para recoger o a domicilio — Mí Pueblito lleva la calidez, el sabor y el corazón de México directo a tu mesa." data-en="Whether you’re stopping by for a quick bite, dining in with family, or ordering online for pickup or delivery — Mi Pueblito brings the warmth, flavor, and heart of Mexico right to your table.">
+                        Whether you’re stopping by for a quick bite, dining in with family, or ordering online for pickup or delivery — Mi Pueblito brings the warmth, flavor, and heart of Mexico right to your table.
+                    </p>
+                </div>
+                <div class="about-image-wrapper reveal delay-2">
+                    <div class="about-shape"></div>
+                    <img id="about-img-1" src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto,w_600/v1792602338/474623217_1077636110829648_4305178904355324537_n_ghj401.jpg" alt="Mexican Food Dish" class="about-img-main">
+                    <img id="about-img-2" src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto,w_600/v1792602341/650119364_1400044731922116_3409942940093583082_n_uh4uh5.jpg" alt="Delicious Tacos" class="about-img-accent">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="subtitle" data-es="Amor al Primer Bocado" data-en="Love At First Bite">Love At First Bite</span>
+                <h2 class="title" data-es="Deliciosa Comida Mexicana" data-en="Delicious Mexican Food">Delicious Mexican Food</h2>
+            </div>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Dynamically populated by JS to include all 15 images -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section" id="info">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="subtitle" style="background: rgba(242, 169, 0, 0.1); color: var(--clr-yellow);" data-es="Visítanos" data-en="Visit Us">Visit Us</span>
+                <h2 class="title" style="color: var(--clr-white);" data-es="Información" data-en="Information">Information</h2>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card reveal">
+                    <div class="info-block">
+                        <h4 data-es="Dirección" data-en="Address">Address</h4>
+                        <p id="info-address">6704 W Bethany Home Rd #3, Glendale, AZ 85303</p>
+                    </div>
+                    <div class="info-block">
+                        <h4 data-es="Horarios" data-en="Opening Hours">Opening Hours</h4>
+                        <p id="info-hours">8:00 AM to 11:00 PM daily</p>
+                    </div>
+                    <div class="info-block">
+                        <h4 data-es="Teléfono" data-en="Phone">Phone</h4>
+                        <p id="info-phone">623-842-4811</p>
+                    </div>
+                    <div class="info-block" style="margin-top: 40px; border: none; padding: 0;">
+                        <a href="https://mipueblitomexicanfood.onlineordering.io/en/menu" class="btn btn-primary" style="width: 100%;" data-es="Pedir en Línea" data-en="Order Online">Order Online</a>
+                    </div>
+                </div>
+                
+                <div class="map-wrapper reveal delay-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.6853753225217!2d-112.20367332353844!3d33.52258847336067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b14644026bd63%3A0xb35eeb7b4a229a43!2s6704%20W%20Bethany%20Home%20Rd%20%233%2C%20Glendale%2C%20AZ%2085303!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img src="https://res.cloudinary.com/dzklt0a5u/image/upload/f_auto,q_auto:eco,dpr_auto,w_250/v1792602260/MiPueblitoMexFoodLOGO_r47pt0.png" alt="Mí Pueblito Logo" class="footer-logo reveal">
+            
+            <div class="social-links reveal delay-1" id="social-icons">
+                <!-- Dynamically populated -->
+                <a href="https://www.instagram.com/mipueblitomexicanfood/" target="_blank" class="social-link" aria-label="Instagram">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/MiPueblitoMexicanFood" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+                </a>
+            </div>
+            
+            <div class="footer-bottom reveal delay-2">
+                <p>&copy; 2015-<span id="copyright-year"></span> Powered by <a href="https://menutech.xyz" target="_blank" rel="noopener noreferrer">Menutech</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Scripts -->
+    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js"></script>
+    <script src="https://menutech.xyz/menutechUI.min.js"></script>
+    
+    <script>
+        // Set dynamic copyright year instantly
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+        // Cloudinary Image Optimizer
+        const optimizeCloudinaryUrl = (url, options = {}) => {
+            if (!url || typeof url !== 'string' || !url.includes('res.cloudinary.com')) return url;
+            const [baseUrl, hash] = url.split('#');
+            if (!baseUrl.includes('/upload/')) return url;
+            const parts = baseUrl.split('/upload/');
+
+            let pathSegments = parts[1].split('/');
+            if (pathSegments.length > 1) {
+                const firstSegment = pathSegments[0];
+                const isVersion = /^v\d+\$/.test(firstSegment);
+                const isTransformation = !isVersion && (firstSegment.includes('_') || firstSegment.includes(','));
+                if (isTransformation) pathSegments.shift();
+            }
+            const cleanPath = pathSegments.join('/');
+
+            let transformations = ['f_auto', 'q_auto:eco', 'dpr_auto'];
+            if (options.width) transformations.push(`w_${options.width}`);
+            if (options.height) transformations.push(`h_${options.height}`);
+            if (options.crop) transformations.push(`c_${options.crop}`);
+            
+            return `${parts[0]}/upload/${transformations.join(',')}/${cleanPath}${hash ? '#'+hash : ''}`;
+        };
+
+        // UI Interactions
+        const navbar = document.getElementById('navbar');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const spans = mobileToggle.querySelectorAll('span');
+            if(navMenu.classList.contains('active')){
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const spans = mobileToggle.querySelectorAll('span');
+                spans.forEach(s => { s.style.transform = 'none'; s.style.opacity = '1'; });
+            });
+        });
+
+        // Scroll animations
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
+        
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => {
+            // Hero is active by default
+            if(!el.classList.contains('active')) {
+                revealObserver.observe(el);
+            }
+        });
+
+        // Translation System
+        let currentLang = 'en';
+        function setLanguage(lang) {
+            currentLang = lang;
+            
+            // Toggle active state on buttons
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-es][data-en]').forEach(el => {
+                if(el.placeholder !== undefined && el.tagName === 'INPUT') {
+                    el.placeholder = el.getAttribute(`data-${lang}`);
+                } else {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                }
+            });
+            
+            document.documentElement.lang = lang;
+        }
+
+        // Complete Gallery from Data
+        const completeGallery = [
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602472/687287613_1444215077505081_1502647049237761399_n_q8ygwv.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602473/676349300_1434108815182374_8888927283771508129_n_tolwhe.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602473/662409533_1417467836846472_6437908026328668976_n_bimhq7.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602474/661449347_1419143540012235_83758331157288598_n_mnirsz.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602474/657881080_1415932956999960_1629339816989340406_n_hie501.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602475/653241706_1405274611399128_7221338825489357714_n_zlkywe.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602475/650119364_1400044731922116_3409942940093583082_n_ecuqm3.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602476/644866167_1391761736083749_8286489668618454393_n_xxjsbz.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602476/497814624_1161042069155718_7427090077070275057_n_kmdo57.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602477/481121297_1107187287874530_9051647480470989580_n_r2xadg.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602477/481473622_1106858507907408_7006826769604373835_n_u8hn63.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602478/481317429_1101108415149084_5508751457903370811_n_v5woac.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602479/480851265_1101844328408826_3557861224158347514_n_ksiwei.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602479/480353971_3061532394000524_1938819915543296959_n_kkqdp5.jpg",
+            "https://res.cloudinary.com/dzklt0a5u/image/upload/v1792602480/474623217_1077636110829648_4305178904355324537_n_huulmv.jpg"
+        ];
+
+        const SOCIAL_ICONS = {
+            instagram: `<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>`,
+            facebook: `<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>`,
+            tiktok: `<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-.9 4.41-2.43 5.95-1.54 1.56-3.7 2.45-5.91 2.49-2.34.04-4.7-.62-6.39-2.19-1.64-1.53-2.58-3.72-2.58-5.96.01-2.28 1.02-4.49 2.72-5.96 1.71-1.48 4.09-2.15 6.35-1.89v4.03c-1.35-.15-2.73.22-3.69 1.12-.96.9-1.41 2.22-1.3 3.53.11 1.34.82 2.59 1.94 3.28 1.13.68 2.54.82 3.8.36 1.25-.45 2.19-1.49 2.52-2.79.16-.62.24-1.28.23-1.92V.02z"/></svg>`,
+            twitter: `<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.48.75 2.78 1.89 3.55-.7 0-1.36-.21-1.94-.53v.05c0 2.05 1.45 3.78 3.39 4.17-.36.1-.74.15-1.13.15-.27 0-.54-.03-.8-.08.54 1.68 2.11 2.9 3.97 2.93-1.46 1.14-3.29 1.82-5.3 1.82-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23Z"/></svg>`
+        };
+
+        function renderGallery(images) {
+            const container = document.getElementById('gallery-container');
+            if(container && images) {
+                container.innerHTML = images.map((img, index) => `
+                    <div class="gallery-item reveal">
+                        <img src="${optimizeCloudinaryUrl(img, { width: 600, height: 600, crop: 'fill' })}" alt="Mexican Food ${index + 1}" loading="lazy">
+                    </div>
+                `).join('');
+                
+                // Re-observe dynamically added gallery items
+                document.querySelectorAll('.gallery-item').forEach(el => {
+                    revealObserver.observe(el);
+                });
+            }
+        }
+
+        // Render initial gallery with all 15 images
+        renderGallery(completeGallery);
+
+        function updateUI(data) {
+            if (!data) return;
+
+            // Logos & Images
+            if (data.logoImg) {
+                const navLogo = document.getElementById('nav-logo');
+                const favicon = document.getElementById('favicon');
+                const optLogo = optimizeCloudinaryUrl(data.logoImg, { width: 250 });
+                if (navLogo) navLogo.src = optLogo;
+                if (favicon) favicon.href = optLogo;
+                
+                const heroLogo = document.querySelector('.hero-logo-anim');
+                const footerLogo = document.querySelector('.footer-logo');
+                if(heroLogo) heroLogo.src = optLogo;
+                if(footerLogo) footerLogo.src = optLogo;
+            }
+
+            if (data.heroImg) {
+                const bg = document.getElementById('hero-bg-img');
+                if (bg) bg.src = optimizeCloudinaryUrl(data.heroImg, { width: 1600 });
+            }
+
+            if (data.aboutImg1) {
+                const img1 = document.getElementById('about-img-1');
+                if (img1) img1.src = optimizeCloudinaryUrl(data.aboutImg1, { width: 600 });
+            }
+            if (data.aboutImg2) {
+                const img2 = document.getElementById('about-img-2');
+                if (img2) img2.src = optimizeCloudinaryUrl(data.aboutImg2, { width: 600 });
+            }
+
+            // Info Data
+            if (data.info) {
+                const addressEls = [document.getElementById('info-address'), document.getElementById('hero-address')];
+                const phoneEl = document.getElementById('info-phone');
+                const hoursEl = document.getElementById('info-hours');
+
+                if (data.info.address) {
+                    addressEls.forEach(el => {
+                        if(el) {
+                            el.textContent = data.info.address;
+                            el.setAttribute('data-en', data.info.address);
+                            el.setAttribute('data-es', data.info.address);
+                        }
+                    });
+                }
+                
+                if (data.info.phone && phoneEl) phoneEl.textContent = data.info.phone;
+                if (data.info.hours && hoursEl) hoursEl.textContent = data.info.hours;
+            }
+
+            // Socials & Tiktok Replacement
+            if (data.socials) {
+                const container = document.getElementById('social-icons');
+                if (container) {
+                    container.innerHTML = data.socials.map(s => {
+                        let platform = s.platform.toLowerCase();
+                        let url = s.url;
+                        if(platform === 'twitter' || url.includes('tiktok.com')) {
+                            platform = 'tiktok';
+                        }
+                        return `
+                        <a href="${url}" target="_blank" class="social-link" aria-label="${platform}">
+                            ${SOCIAL_ICONS[platform] || SOCIAL_ICONS['facebook']}
+                        </a>
+                    `}).join('');
+                }
+            }
+
+            // Update Gallery if new data provided
+            if (data.gallery && data.gallery.length > 0) {
+                renderGallery(data.gallery);
+            }
+
+            if (window.glfBindButtons) window.glfBindButtons();
+        }
+
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'UPDATE_CONTENT') {
+                updateUI(event.data.data);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('en');
+            if (window.MENU_TECH_STATE) {
+                updateUI(window.MENU_TECH_STATE);
+            }
+            setTimeout(() => { if(window.glfBindButtons) window.glfBindButtons(); }, 1500);
+        });
+
+    </script>
+</body>
+</html>
